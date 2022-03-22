@@ -1,0 +1,264 @@
+@import "_min-style" ;
+
+
+// starts style the header
+header{
+    overflow: hidden;
+    .fa-solid{
+        display: none;
+        float: right;
+        padding: 1rem;
+        margin-right: 2rem;
+        color: $black;
+        background-color: $white;
+        font-size: 1.3rem;
+        &:hover{
+            color: $white;
+            background-color: gold;
+        }
+        &:active{transform: rotate(720deg);}
+    }
+    
+    nav{
+        background-color: rgb(6, 7, 20);
+        box-shadow: $box-shadow;
+
+        ul{ 
+            display: flex;  
+            float: right;
+            align-items: center;
+            margin-right: 3rem;
+
+            li{
+                font-size: 1.4em;
+                margin:1rem 2rem;
+                a{
+                    color: $white;
+                    &:hover{color: gold;}
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:575px) {
+    header{
+        .navbar{
+            transition: all 1s;
+            position: absolute;
+            top: -300px;
+            width: 100%;
+            z-index: 888;
+            ul{display: block;
+            float: left;
+            }
+        }
+        .nav_block{
+            transition: all 1s;
+            position:absolute;
+            top:70px;
+            width: 100%;
+            z-index: 888;
+            ul{
+                display: block;
+                float:left;
+            }
+        }
+        .fa-solid{display: block;}
+    }
+}
+// ends style the header
+
+
+
+// start style the home
+.home{
+    font-family: 'Prompt', sans-serif;
+    background-color:rgb(0, 0, 0);
+    color: $white;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    div{
+        @include grid(25rem);
+        align-items: center;
+        margin: auto;
+        width: 90%;
+        padding-top: 10%;
+
+        .my_img{
+            width: 60%;
+            height: auto;
+        }
+        .tittle{
+            h1{
+                font-size: 2rem;
+                text-transform: uppercase;
+                font-weight: normal;
+            }
+            p{
+                font-size: 1.2rem;
+                color: rgb(224, 209, 209);
+            }
+        }
+    }
+}
+@media screen and (max-width:925px){
+    .home{
+        height: auto;
+        div{
+            justify-items: center;
+            justify-content: center;
+            text-align: center;
+            .my_img{
+                width: 50%;
+                height: auto;
+            }
+        }
+        .tittle{padding: 3rem;}
+    }
+}
+// end style the home
+
+
+
+// starts style the my_Skills
+#my_Skills{
+    overflow: hidden;
+    .contaioner_img{
+        text-align: center;
+        img{
+            margin: 3rem;
+            width: 200px;
+            height: auto;
+            transition: all 1s;
+            &:hover{
+                transform:scale(1.2);
+                background-color:$white;
+            }
+        }
+    }
+}
+// end style the my_Skills
+
+
+
+// starts style the our_project
+#our_project{
+    padding-bottom: 15rem;
+    width: 100%;
+    overflow: hidden;
+    .contaioner_project{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        width: 100%;
+        .project{
+            max-width: 350px;
+            height: auto;
+            border: $border;
+            overflow: hidden;
+            border-radius: 8px;
+            img{
+                object-fit: cover;
+            }
+            .content{
+                padding: 2rem;
+                display: flex;
+                justify-content: space-around;
+                
+                    img{
+                        min-width: 70px;
+                        max-width: 70px;
+                        height: auto;
+                        &:hover{  transform: rotate(720deg) scale(1.3); }
+                    }
+                
+            }
+            p{
+                font-size: 1.3rem;
+                text-align: center;
+                padding: 1rem;
+            }
+            img{
+                min-width: 400px;
+                max-width: 400px;
+                height: 320px;
+                
+                &:hover{ transform: scale(1.1); }
+            }
+        }
+    }
+}
+// ends style the our_project
+
+
+
+// starts style the footer
+footer{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    background-color:$black;
+    color: $white;
+    nav{
+        ul{
+            display: flex;
+        }
+        li{
+            font-size: 1.5rem;
+            margin: 0px 2rem;
+            a{
+                color: $white;
+                &:hover{color: gold;}
+            }
+        }
+        i{font-size:2rem;}
+    }
+
+    .fa-github:hover{color:rgb(124, 12, 116);}
+    .fa-linkedin:hover{color:rgb(27, 10, 175);}
+    .fa-facebook:hover{color:rgb(6, 49, 240);}
+}
+@media screen and (max-width:1120px){
+    footer{
+        display: block;
+        nav{
+            ul{
+                display:flex;
+                justify-content: center;
+                margin: 20px 0px;
+            }
+        }
+    }
+}
+@media screen and (max-width:611px){
+    footer{
+        nav{
+            ul{
+                display:block;
+                text-align: center;
+                margin: 20px 0px;
+            }
+        }
+    }
+}
+// end style the footer
+
+// style the responseve phone
+@media screen and(max-width:467px) {
+    html{
+        font-size: 55%;
+    }
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    
+}
+::-webkit-scrollbar-track{
+    background-color:rgb(240, 248, 255);
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(217, 255, 1);
+}

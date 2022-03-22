@@ -1,0 +1,22 @@
+// whatsapp
+<i class="fab fa-whatsapp"></i>
+
+
+// phone
+<i class="fas fa-phone-alt"></i>
+
+// twiter
+<i class="fab fa-twitter"></i>
+
+
+// facbook
+<i class="fab fa-facebook"></i>
+
+// instgram
+<i class="fab fa-instagram"></i>
+
+// lenked in
+<i class="fab fa-linkedin"></i>
+
+// git hub
+<i class="fa-brands fa-github"></i>
